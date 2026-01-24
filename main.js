@@ -1,5 +1,6 @@
 const generateBtn = document.getElementById('generate');
-const numberElements = document.querySelectorAll('.number');
+const menuImage = document.getElementById('menu-image');
+const menuName = document.getElementById('menu-name');
 const themeSwitch = document.getElementById('checkbox');
 
 // Function to apply theme
@@ -23,19 +24,13 @@ const toggleTheme = () => {
 // Event listener for the theme switch
 themeSwitch.addEventListener('change', toggleTheme);
 
-// Event listener for the lotto number generator
+// Event listener for the menu recommendation button
 generateBtn.addEventListener('click', () => {
-    const numbers = new Set();
-    while (numbers.size < 6) {
-        const randomNumber = Math.floor(Math.random() * 45) + 1;
-        numbers.add(randomNumber);
-    }
+    const randomIndex = Math.floor(Math.random() * menus.length);
+    const selectedMenu = menus[randomIndex];
 
-    const sortedNumbers = Array.from(numbers).sort((a, b) => a - b);
-
-    numberElements.forEach((element, index) => {
-        element.textContent = sortedNumbers[index];
-    });
+    menuImage.src = selectedMenu.image;
+    menuName.textContent = selectedMenu.name;
 });
 
 // On page load, check for saved theme preference
