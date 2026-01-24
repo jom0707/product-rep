@@ -38,21 +38,10 @@ body.dark-mode {
     transition: background-color 0.3s;
 }
 
-.menu-recommendation {
-    margin: 2rem 0;
-}
-
-#menu-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    max-height: 300px;
-}
-
 #menu-name {
     font-size: 1.5rem;
     font-weight: bold;
+    margin: 2rem 0; /* Add margin to compensate for removed image */
 }
 
 #generate {

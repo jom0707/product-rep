@@ -1,8 +1,3 @@
-var disqus_config = function () {
-    this.page.url = window.location.href;  // Use the current page's URL
-    this.page.identifier = 'dinner-menu-recommendation'; // A unique identifier for this page
-};
-
 const generateBtn = document.getElementById('generate');
 const menuImage = document.getElementById('menu-image');
 const menuName = document.getElementById('menu-name');
@@ -34,7 +29,7 @@ generateBtn.addEventListener('click', () => {
     const randomIndex = Math.floor(Math.random() * menus.length);
     const selectedMenu = menus[randomIndex];
 
-    menuImage.src = selectedMenu.image;
+    // menuImage.src = selectedMenu.image; // Removed as image tag is removed
     menuName.textContent = selectedMenu.name;
 });
 
