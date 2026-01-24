@@ -1,6 +1,7 @@
 const generateBtn = document.getElementById('generate');
-const menuImage = document.getElementById('menu-image');
+// const menuImage = document.getElementById('menu-image'); // Removed as image tag is removed
 const menuName = document.getElementById('menu-name');
+const menuDescription = document.getElementById('menu-description');
 const themeSwitch = document.getElementById('checkbox');
 
 // Function to apply theme
@@ -29,8 +30,8 @@ generateBtn.addEventListener('click', () => {
     const randomIndex = Math.floor(Math.random() * menus.length);
     const selectedMenu = menus[randomIndex];
 
-    // menuImage.src = selectedMenu.image; // Removed as image tag is removed
     menuName.textContent = selectedMenu.name;
+    menuDescription.textContent = selectedMenu.description;
 });
 
 // On page load, check for saved theme preference

@@ -13,6 +13,7 @@ body {
     color: var(--text-color);
     font-family: sans-serif;
     display: flex;
+    flex-direction: column; /* Changed to column to stack sections */
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -36,12 +37,20 @@ body.dark-mode {
     border-radius: 10px;
     box-shadow: 0 0 10px var(--shadow-color);
     transition: background-color 0.3s;
+    margin-bottom: 2rem; /* Add margin to separate from footer sections */
 }
 
 #menu-name {
     font-size: 1.5rem;
     font-weight: bold;
-    margin: 2rem 0; /* Add margin to compensate for removed image */
+    margin: 2rem 0 1rem 0; /* Adjust margin */
+}
+
+#menu-description {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 600px;
 }
 
 #generate {
@@ -128,4 +137,23 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+.footer-section {
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    border-top: 1px solid var(--shadow-color); /* Use shadow color for border */
+}
+
+.footer-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section p {
+    font-size: 0.9rem;
+    color: var(--text-color);
 }
